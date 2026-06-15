@@ -72,16 +72,19 @@ select {
 
 .cta-button {
   display: inline-block;
+  align-self: flex-start;
   background-color: var(--color-accent);
   color: var(--color-text-dark);
-  padding: 12px 24px;
+  padding: 13px 32px;
   border-radius: var(--radius-md);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-base);
-  transition: background-color var(--transition-fast);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
   border: none;
+  letter-spacing: 0.5px;
 }
 
 .cta-button:hover {
   background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
 }

@@ -1,0 +1,138 @@
+.scroll-section {
+  padding: var(--spacing-lg) var(--spacing-lg);
+  position: relative;
+}
+
+.scroll-section .section-title {
+  padding-left: 4px;
+  margin-bottom: var(--spacing-md);
+}
+
+.scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Card Row ── */
+.card-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 4px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Individual Card ── */
+.card {
+  background-color: var(--color-bg-card);
+  flex: 0 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 200px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-card);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 10px 12px 14px;
+}
+
+.card-info h3 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-genre {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── Scroll Buttons ── */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  color: var(--color-text-primary);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background var(--transition-fast);
+}
+
+.scroll-btn:hover {
+  background: rgba(102, 252, 241, 0.25);
+  color: var(--color-accent);
+}
+
+.scroll-btn.left  { left: -18px; }
+.scroll-btn.right { right: -18px; }
+
+/* ── See All Button ── */
+.see-all-btn {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  margin-left: 4px;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+}
+
+.see-all-btn:hover {
+  color: var(--color-accent-hover);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .scroll-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .card img {
+    height: 210px;
+  }
+
+  .scroll-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .scroll-btn.left  { left: -12px; }
+  .scroll-btn.right { right: -12px; }
+}
