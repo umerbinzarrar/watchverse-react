@@ -23,9 +23,9 @@
   );
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding-left: 8%;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .hero-overlay h1 {

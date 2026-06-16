@@ -12,6 +12,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  padding: 0 24px;
 }
 
 /* ── Card Row ── */
@@ -23,6 +24,7 @@
   padding: 10px 4px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 
 .card-row::-webkit-scrollbar {
@@ -88,6 +90,7 @@
   justify-content: center;
   z-index: 10;
   transition: background var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .scroll-btn:hover {
@@ -95,14 +98,14 @@
   color: var(--color-accent);
 }
 
-.scroll-btn.left  { left: -18px; }
-.scroll-btn.right { right: -18px; }
+.scroll-btn.left  { left: -8px; }
+.scroll-btn.right { right: -8px; }
 
 /* ── See All Button ── */
 .see-all-btn {
   display: inline-block;
-  margin-top: var(--spacing-md);
-  margin-left: 4px;
+  margin-top: 12px;
+  margin-left: 28px;
   color: var(--color-accent);
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-sm);
@@ -119,6 +122,10 @@
     padding: var(--spacing-lg) var(--spacing-md);
   }
 
+  .scroll-wrapper {
+    padding: 0 18px;
+  }
+
   .card {
     width: 150px;
   }
@@ -133,6 +140,10 @@
     font-size: 18px;
   }
 
-  .scroll-btn.left  { left: -12px; }
-  .scroll-btn.right { right: -12px; }
+  .scroll-btn.left  { left: -6px; }
+  .scroll-btn.right { right: -6px; }
+
+  .see-all-btn {
+    margin-left: 18px;
+  }
 }

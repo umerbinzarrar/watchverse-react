@@ -1,0 +1,13 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.home-carousels {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Section divider */
+.home-carousels .scroll-section + .scroll-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
